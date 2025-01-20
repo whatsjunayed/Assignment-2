@@ -18,6 +18,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header,
 main,
 footer {
@@ -77,13 +78,18 @@ nav ul li::after {
 nav ul li:hover::after {
   width: 100%;
 }
-
+.menu-icon,
+.card-6,
+.card-7,
+hr {
+  display: none;
+}
 .hero {
   gap: 50px;
   padding: 0;
 }
 .hero-image {
-  max-width: 40%;
+  width: 40%;
 }
 .hero-content {
   display: flex;
@@ -91,7 +97,7 @@ nav ul li:hover::after {
   gap: 24px;
 }
 .hero-content h1 {
-  font-size: 56px;
+  font-size: 3.5rem;
   line-height: 61px;
 }
 .curriculum-container {
@@ -122,12 +128,12 @@ nav ul li:hover::after {
 }
 .card-description {
   font-family: "Raleway", serif;
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #869499;
 }
 .read-more {
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 .read-more:hover {
@@ -187,6 +193,31 @@ nav ul li:hover::after {
 .stories img {
   width: 100%;
 }
+
+.story-date,
+.sm-story-date {
+  position: relative;
+  cursor: default;
+}
+.story-date span,
+.sm-story-date span {
+  position: absolute;
+  display: block;
+  bottom: -5%;
+  left: 10%;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 47px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Raleway", serif;
+}
+
+.sm-story-date span {
+  bottom: -7%;
+  padding: 10px 20px;
+}
+
 .card-1 {
   display: flex;
   flex-direction: column;
@@ -204,7 +235,7 @@ nav ul li:hover::after {
   gap: 20px;
 }
 .other-card h3 {
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 38px 38px 28px 38px;
 }
@@ -223,7 +254,7 @@ footer {
 }
 
 .footer-logo span {
-  font-size: 42px;
+  font-size: 2.6rem;
   font-weight: bold;
   line-height: 40px;
 }
@@ -317,6 +348,15 @@ footer {
 .block {
   display: block;
 }
+.bg-1 {
+  background-color: #91b23c;
+}
+.bg-2 {
+  background-color: #6457ea;
+}
+.bg-3 {
+  background-color: #0fd7e7;
+}
 .gradient1 {
   background: linear-gradient(to bottom, #def5ff, #ffffff 40%);
   border: 1px solid #def5ff;
@@ -328,4 +368,111 @@ footer {
 .gradient3 {
   background: linear-gradient(to bottom, #f2e8ff, #ffffff 40%);
   border: 1px solid #f2e8ff;
+}
+
+/* reponsive for mobile devices */
+
+@media screen and (max-width: 576px) {
+
+  nav,
+  section,
+  .hero,
+  .footer-container {
+    width: 90%;
+  }
+  .logo-image {
+    height: 46px;
+    width: 46px;
+  }
+  nav ul li,
+  nav button,
+  .nav-logo h1,
+  .arrow-container,
+  .card-1 {
+    display: none;
+  }
+  .menu-icon,
+  .card-6,
+  .card-7 {
+    display: block;
+    cursor: pointer;
+  }
+  hr {
+    display: block;
+    border: 1px solid #ffa42b;
+  }
+  .hero {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .hero img {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 40px;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  .btn2 {
+    padding: 6px 24px;
+    font-size: 1rem;
+  }
+  .hero-btn {
+    display: flex;
+    justify-content: center;
+  }
+  section {
+    padding: 30px;
+  }
+  .section-title {
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+  }
+  .curriculum-card-container,
+  .stories-card-container {
+    grid-template-columns: 1fr;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card {
+    gap: 22px;
+    margin: 0;
+  }
+  .card p {
+    font-size: 0.6rem;
+  }
+  .curriculum-card-container img {
+    width: 30%;
+  }
+  .other-card h3 {
+    font-size: 0.6rem;
+    padding: 22px;
+  }
+  .stories-card-container {
+    margin: 10px auto;
+  }
+  .stories-btn {
+    margin-top: 30px;
+  }
+  .footer-content {
+    width: 100%;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+  }
+  footer p {
+    text-align: left;
+  }
+  .sm-story-date span {
+    font-size: 0.6rem;
+    bottom: -4%;
+    padding: 5px 10px;
+  }
 }
