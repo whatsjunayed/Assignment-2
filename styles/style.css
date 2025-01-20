@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.primary-font {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.secondary-font {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header,
+main,
+footer {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+nav,
+section,
+.hero,
+.footer-container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+header {
+  background-color: #f7f7f7;
+}
+
+.logo-image {
+  height: 62px;
+  width: 62px;
+}
+nav {
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.nav-logo {
+  cursor: pointer;
+}
+nav ul {
+  gap: 32px;
+}
+a {
+  text-decoration: none;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+  position: relative;
+}
+nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: black;
+  transition: 0.3s;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+
+.hero {
+  gap: 50px;
+  padding: 0;
+}
+.hero-image {
+  max-width: 40%;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.hero-content h1 {
+  font-size: 56px;
+  line-height: 61px;
+}
+.curriculum-container {
+  background-color: #f7f7f7;
+  background-image: url("../assets/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.curriculum-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.curriculum-card-container img {
+  width: 50%;
+}
+.card {
+  padding: 55px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 35px;
+  border-radius: 18px;
+  box-shadow: inset 0 0 28.3px 0.94px rgba(0, 0, 0, 0.05);
+  margin: 80px auto;
+}
+.card-description {
+  font-family: "Raleway", serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #869499;
+}
+.read-more {
+  font-size: 15px;
+  font-weight: bold;
+}
+.read-more:hover {
+  cursor: pointer;
+  color: black;
+}
+.arrow-bg {
+  height: 60px;
+  width: 60px;
+  background-color: #ffa42b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.arrow-bg:hover {
+  background-color: #00abf9;
+}
+.arrow-bg:nth-child(1) {
+  rotate: 180deg;
+}
+.arrow-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.stories-container {
+  background: linear-gradient(to bottom, #f7f7f7, #fadeb2 50%);
+  position: relative;
+}
+.stories-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-image: url("../assets/bg.png");
+}
+.stories-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 80px auto;
+}
+.stories-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: white;
+  z-index: 999;
+}
+.stories img {
+  width: 100%;
+}
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 35px;
+}
+.card-1 h2,
+.card-1 p {
+  padding: 0 40px;
+}
+
+.other-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.other-card h3 {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 38px 38px 28px 38px;
+}
+
+.stories-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  background-color: #00abf9;
+  color: white;
+}
+.footer-logo img {
+  width: 20%;
+}
+
+.footer-logo span {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.footer-content {
+  width: 30%;
+}
+.footer-content p {
+  margin-top: 35px;
+  color: rgba(255, 255, 255, 0.74);
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-routes {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contact h2 {
+  padding-bottom: 32px;
+}
+.footer-routes p:hover {
+  color: #111111;
+  cursor: pointer;
+}
+.contact img {
+  width: 20%;
+  cursor: pointer;
+}
+
+/* shared */
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 60px;
+  background-color: #ffa42b;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  font-family: "Quicksand", serif;
+  font-size: 1.25rem;
+  border: 2px solid transparent;
+  direction: 0.3s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #ffa42b;
+  border: 2px solid #ffa42b;
+}
+.btn2 {
+  padding: 10px 47px;
+  color: white;
+  background-color: #111111;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: "Quicksand", serif;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  direction: 0.3s;
+  cursor: pointer;
+  z-index: 999;
+}
+.btn2:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+.color1 {
+  color: #ffa42b;
+}
+.color2 {
+  color: #00abf9;
+}
+.color3 {
+  color: #00d3de;
+}
+.color4 {
+  color: #6457e9;
+}
+.block {
+  display: block;
+}
+.gradient1 {
+  background: linear-gradient(to bottom, #def5ff, #ffffff 40%);
+  border: 1px solid #def5ff;
+}
+.gradient2 {
+  background: linear-gradient(to bottom, #fff4dc, #ffffff 40%);
+  border: 1px solid #fff4dc;
+}
+.gradient3 {
+  background: linear-gradient(to bottom, #f2e8ff, #ffffff 40%);
+  border: 1px solid #f2e8ff;
+}
