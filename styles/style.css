@@ -39,7 +39,10 @@ section,
 header {
   background-color: #f7f7f7;
 }
-
+.top-nav {
+  font-weight: 600;
+  background-color: #ffa42b;
+}
 .logo-image {
   height: 62px;
   width: 62px;
@@ -373,7 +376,9 @@ footer {
 /* reponsive for mobile devices */
 
 @media screen and (max-width: 576px) {
-
+  .top-nav {
+    font-size: small;
+  }
   nav,
   section,
   .hero,
