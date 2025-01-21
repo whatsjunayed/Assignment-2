@@ -42,6 +42,7 @@ header {
 .top-nav {
   font-weight: 600;
   background-color: #ffa42b;
+  color: white;
 }
 .logo-image {
   height: 62px;
